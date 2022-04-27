@@ -1,0 +1,4 @@
+[core]
+    remote = storage
+['remote "storage"']
+    url = ../housepricing-piy6q56uooyry9ikyix33d56jrdb1euw2a-s3alias
