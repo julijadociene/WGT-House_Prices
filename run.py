@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import subprocess
 from scripts import unzip_data
+import os
 import os.path
 
 #import dvc.yaml
@@ -17,6 +18,9 @@ with open(r'.\results\readme.txt', 'w') as f:
 
     #unzip downloaded data
     subprocess.call("unzip_data.py", shell=True)
+
+    #delete house-prices-advanced-regression-techniques.zip file
+    os.remove("house-prices-advanced-regression-techniques.zip")
 
     #import train.csv file
     df = pd.read_csv(r'.\data\train.csv')
