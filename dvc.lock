@@ -1,0 +1,6 @@
+schema: '2.0'
+stages:
+  download data:
+    cmd: kaggle competitions download -c house-prices-advanced-regression-techniques
+  unzip data:
+    cmd: python scripts/unzip_data.py data/
