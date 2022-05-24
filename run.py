@@ -15,7 +15,6 @@ import os.path
     #second arg notes that the file is open to write to it
 with open(r'.\results\readme.txt', 'w') as f:
     
-
     #unzip downloaded data
     subprocess.call("unzip_data.py", shell=True)
 
