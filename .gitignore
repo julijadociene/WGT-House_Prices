@@ -1,6 +1,5 @@
 houseprices/*
 .python-version/
-scripts/*
 data/data_description.txt
 data/sample_submission.csv
 data/test.csv
