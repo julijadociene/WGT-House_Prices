@@ -5,9 +5,6 @@ from scripts import unzip_data
 import os
 import os.path
 
-#import dvc.yaml
-#run dvc.yaml file
-
 
 
 #save output to results location

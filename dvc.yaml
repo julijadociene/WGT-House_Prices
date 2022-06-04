@@ -1,6 +1,6 @@
 stages:
-  download data:
+  download-data:
     cmd: kaggle competitions download -c house-prices-advanced-regression-techniques
-
-  unzip data:
-    cmd: python scripts/unzip_data.py data/
+  unzip-data:
+    cmd: 'with zipfile.ZipFile .\house-prices-advanced-regression-techniques.zip r
+      as zip_ref:'

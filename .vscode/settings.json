@@ -1,3 +1,4 @@
 {
-    "notebook.consolidatedRunButton": true
+    "notebook.consolidatedRunButton": true,
+    "notebook.output.textLineLimit": 90
 }
