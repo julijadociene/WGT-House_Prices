@@ -52,6 +52,13 @@ def removing_missing_values_test(dataframe):
       dataframe.loc[:, columns_na_to_0_test] = imputer7.transform(dataframe.loc[:, columns_na_to_0_test])
    return dataframe
 
+#Making dummy variables
+def encoding(dataframe):
+    #make dataframe copy
+    dataframe_encoding = dataframe.copy()
+    dataframe_encoding = pd.get_dummies(dataframe)
+    return dataframe_encoding
+
 #pathai, kintamieji, funkcijų vykdymas
 if __name__ == "__main__":
     df_train = pd.read_csv(r'.\data\train.csv')
@@ -78,7 +85,7 @@ if __name__ == "__main__":
                         'GarageYrBlt']
     df_c_train = removing_missing_values(df_train)
     
-    df_test = pd.read_csv(r'.data\test.csv')
+    df_test = pd.read_csv(r'.\data\test.csv')
     missing_df_test = missing_cols(df_test)
     columns_na_to_None_test = ['Alley',
                       'BsmtQual',
@@ -115,6 +122,9 @@ if __name__ == "__main__":
                    'GarageCars',
                    'GarageArea']
     df_c_test = removing_missing_values_test(df_test)
+
+df_c_train_encoding = encoding(df_c_train)
+df_c_test_encoding = encoding(df_c_test)
     
 
 #galimi taisymai:

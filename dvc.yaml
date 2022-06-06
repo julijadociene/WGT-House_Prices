@@ -4,3 +4,5 @@ stages:
   unzip-data:
     cmd: 'with zipfile.ZipFile .\house-prices-advanced-regression-techniques.zip r
       as zip_ref:'
+  feature_engineering:
+    cmd: poetry run python feature_engineering.py
