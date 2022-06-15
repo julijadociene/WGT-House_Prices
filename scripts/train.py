@@ -7,8 +7,8 @@ from sklearn import metrics
 import feature_engineering
 
 def regression (dataframe):
-    X = dataframe.copy()
-    y = X['SalePrice']
+    X = dataframe.drop('SalePrice',axis=1).copy()
+    y = dataframe['SalePrice']
     xtrain, xtest, ytrain, ytest = train_test_split(X, y, test_size=0.2, random_state=42)
     reg = LinearRegression().fit(xtrain, ytrain)
     ypred = reg.predict(xtest)
