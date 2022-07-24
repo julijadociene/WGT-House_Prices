@@ -18,5 +18,6 @@ def regression (dataframe):
 if __name__ == "__main__":
     train_size = 0.8
     test_size=0.2
+    df_c_train_encoding = encoding(df_c_train)
     regression(feature_engineering.df_c_train_encoding)
 

@@ -3,6 +3,7 @@ import numpy as np
 import subprocess
 import sklearn
 from sklearn.impute import SimpleImputer
+from typing import list
 
 #Defining dataframe with columns with missing data
 def missing_cols(dataframe):
@@ -15,6 +16,15 @@ def missing_cols(dataframe):
     # converting the missing_df to a dataframe
     missing_df = pd.DataFrame(missing_df, index = ['MissingValues']).T.sort_values(by='MissingValues', ascending=False)
     return missing_df
+
+#kad būtų viena funkcija, o ne kelios tam pačiam
+#def removing_missing_values(dataframe:pd.DataFrame, column_names_list:List[str], strategy:str) -> pd.DataFrame:
+#      for column in column_names_list:
+#      imputer = SimpleImputer(missing_values = np.nan, strategy=strategy, fill_value='None')
+#      imputer.fit(dataframe.loc[:, column_names_list])
+#      dataframe.loc[:, column_names_list] = imputer.transform(dataframe.loc[:, column_names_list])
+#      return dataframe
+
 
 #Simple Imputer for missing values train
 def removing_missing_values(dataframe):
